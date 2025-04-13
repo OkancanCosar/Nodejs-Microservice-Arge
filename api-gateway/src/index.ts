@@ -10,6 +10,15 @@ app.get('/', (_req, res) => {
 
 app.get('/api/orders', async (_req, res) => {
     try {
+        const response = await axios.get('http://order-service:3001/orders');
+        res.status(200).json(response.data);
+    } catch (error) {
+        res.status(500).json({ error: 'Order Service ulaşılamıyor' });
+    }
+});
+
+app.get('/api/orders2', async (_req, res) => {
+    try {
         const response = await axios.get('http://order-service:3001/orders2');
         res.status(200).json(response.data);
     } catch (error) {

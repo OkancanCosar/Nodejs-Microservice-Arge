@@ -1,5 +1,5 @@
 ### Docker up
 
 ```bash
-    docker-compose up --build -d
+    docker-compose -p beniduy up --build -d
 ```

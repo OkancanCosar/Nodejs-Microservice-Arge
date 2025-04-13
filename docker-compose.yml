@@ -3,6 +3,8 @@ version: '3.8'
 services:
   api-gateway:
     build: ./api-gateway
+    container_name: api
+    image: api
     ports:
       - "3000:3000"
     depends_on:
@@ -11,10 +13,14 @@ services:
 
   order-service:
     build: ./order-service
+    container_name: order
+    image: order
     ports:
       - "3001:3001"
 
   inventory-service:
     build: ./inventory-service
+    container_name: inventory
+    image: inventory
     ports:
       - "3002:3002"
