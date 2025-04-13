@@ -1,0 +1,5 @@
+{
+  "scripts": {
+    "docker": "docker-compose -p beniduy up --build -d"
+  }
+}
